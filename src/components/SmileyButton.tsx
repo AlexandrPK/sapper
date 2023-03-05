@@ -2,7 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getGameConfig, getSmileyButton } from '../state/selectors';
 import { onSmileyClick, setSmileyButton } from '../state/actions';
-import { includes } from 'lodash/lodash';
+import { includes } from 'lodash';
 import { GameConfig } from '../model/Game';
 import { SmileyButton } from '../model/Smiley';
 

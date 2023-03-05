@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { range } from 'lodash/lodash';
+import { range } from "lodash";
 import { useDispatch, useSelector } from 'react-redux';
 import { getGameConfig, getMinutesCounter, getTimeCounter, isClockRunning } from '../state/selectors';
 import ThreeDigitCounter from './ThreeDigitCounter';
