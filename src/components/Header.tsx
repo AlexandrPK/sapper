@@ -14,7 +14,7 @@ const Header = () => {
   const config = useSelector(getGameConfig);
   const timeCounter = useSelector(getTimeCounter);
   const clockRunning = useSelector(isClockRunning);
-  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const intervalRef = useRef<number | null>(null);
   
 
   useEffect(() => {
