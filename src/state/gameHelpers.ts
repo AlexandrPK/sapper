@@ -61,7 +61,7 @@ export const handleLeftClick = (state: RootState, action: PayloadAction<string, 
 };
 
 export const handleRightClick = (state: RootState, action: PayloadAction<string, Coordinate>) => {
-  const { board, minesCounter, gameEnded } = state;
+  const { board, minutesCounter, gameEnded } = state;
   if (gameEnded) {
     return state;
   }
@@ -77,7 +77,7 @@ export const handleRightClick = (state: RootState, action: PayloadAction<string,
     return ({
       ...state,
       board: newBoard,
-      minesCounter: minesCounter - 1,
+      minutesCounter: minutesCounter - 1,
     });
   }
   if (isBombFlag(cell)) {
@@ -86,7 +86,7 @@ export const handleRightClick = (state: RootState, action: PayloadAction<string,
     return ({
       ...state,
       board: newBoard,
-      minesCounter: minesCounter + 1,
+      minutesCounter: minutesCounter + 1,
     });
   }
   return state;

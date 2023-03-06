@@ -22,7 +22,7 @@ import { RootState } from './store';
 
 const getInitialState = (difficulty = DIFFICULTY_OPTIONS[0]) => ({
   difficulty,
-  minesCounter: difficulty.config.mines,
+  minutesCounter: difficulty.config.mines,
   timeCounter: 0,
   smileyButton: SmileyButton.facesmile,
   board: initBoard(difficulty.config.width, difficulty.config.height),
@@ -41,7 +41,7 @@ const reducer = createReducer<RootState>(getInitialState())
   ))
   .handleType(SET_MINES_COUNTER, (state: RootState, action: PayloadAction<string, number>) => ({
     ...state,
-    minesCounter: action.payload, 
+    minutesCounter: action.payload, 
   }))
   .handleType(SET_TIME_COUNTER, (state: RootState, action: PayloadAction<string, number>) => ({
     ...state,
